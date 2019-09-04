@@ -1,0 +1,80 @@
+.imgUploadBox{margin-top:10px;padding-left:50px;}
+.UploadBox{
+    border:1px dashed #ddd;
+    padding-top:20px;
+    width:130px;height:130px;
+    p{
+        border:1px solid #ddd;
+        height:30px;
+        line-height:30px;margin-bottom:20px;
+        text-align: center;
+        width:100px;
+        margin:0 auto;
+        border-radius: 3px;
+        margin-bottom: 20px;
+    }
+}
+.imgBox{
+    width:130px;height:130px;border:1px dashed #ddd;position: relative;
+    &>p{display:none;background: rgba(0,0,0,0.5);
+        top:0;left:0; position: absolute;text-align: center; width:130px;height:130px;line-height:130px;
+        i{margin:0 10px;color:#fff;}
+    }
+    img{max-height:130px;}
+    
+}
+.imgBox:hover{
+    &>p{display:block;}
+}
+.title{
+    font-size: 18px; font-weight: bold; color:#000;margin-bottom:10px ;
+}
+.content{
+    padding-left: 20px;
+    &>div{
+        margin-bottom:15px;
+        // &>span{margin:0 10px;}
+        &>p{
+            display:inline-block;
+            width:100px;
+            text-align:right;
+            margin-right:10px;
+        }
+    }
+    b{color:red;font-weight: normal;}
+    .actTitle{
+
+    }
+}
+.modalNewUser{
+    width:346px;
+    b{color:red;}
+    span{margin-right:15px;}
+    p{
+        text-align: right;
+
+    }
+    :global{
+        .ant-input{
+            width:250px;
+        }
+    }
+    
+}
+.searchInline{
+    display:inline-block
+}
+.submit{
+    text-align:center;
+    margin-top:10px;
+    width:1653px;
+    height:80px;
+    line-height:80px;
+    background: #fff;
+    button{margin:0 20px;}
+    position: fixed;bottom:0;z-index:1000;
+}
+
+.WrongWarning{
+    color:red;
+}

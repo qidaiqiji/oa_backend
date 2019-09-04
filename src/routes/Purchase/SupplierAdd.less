@@ -1,0 +1,78 @@
+.box{
+    width: 100%;
+    height: 100%;
+    padding: 10px 40px 10px 40px;
+    box-sizing: border-box;
+    border-bottom: 2px dashed #666;
+}
+.logo{
+    width: 40px;
+    height: 40px;
+}
+.key {
+    display: inline-block;
+    width: 100px;
+    
+}
+.lines {
+    padding-left: 150px;
+    margin-bottom: 0;
+
+}
+.value {
+    display: inline-block;
+    padding-left: 20px;
+}
+.attachment{
+    margin-left: 50px;
+    margin-top: 20px;
+    .imgBox{
+        width:80px;
+        height: 80px;
+        padding: 6px;
+        border: 1px solid #ccc;
+        margin-right: 10px;
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .cover{
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,.5);
+            display: none;
+            position: absolute;
+            left: 0;
+            top:0;
+            text-align: center;
+            line-height: 90px;
+        }
+    }
+    span{
+        margin-right: 20px;
+    }
+}
+.imgBox:hover .cover{
+    display: block;
+}
+.cancelDelete {
+    display:inline-block;
+    border:1px solid #1890ff;
+    border-radius:4px;
+    margin-left:10px;
+    padding: 0 4px;
+    font-size:12px;
+    color:#1890ff;
+    cursor: pointer;
+}
+
+.globalSelect{
+    :global{
+        .ant-select-selection--single{
+            border-color: red!important;
+        }
+    }
+}

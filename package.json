@@ -1,0 +1,148 @@
+{
+  "name": "ant-design-pro",
+  "version": "0.3.0",
+  "description": "An out-of-box UI solution for enterprise applications",
+  "private": true,
+  "scripts": {
+    "dev:mock": "cross-env API_ENV=mock BROWSER=none  roadhog server",
+    "dev:debug": "cross-env API_ENV=debug roadhog server",
+    "dev:t243": "cross-env API_ENV=t243 roadhog server",
+    "dev:t241": "cross-env API_ENV=t241  BROWSER=none roadhog server",
+    "dev:t240": "cross-env API_ENV=t240 roadhog server",
+    "dev:t242": "cross-env API_ENV=t242 roadhog server",
+    "dev:test": "cross-env API_ENV=test roadhog server",
+    "dev:testerp": "cross-env API_ENV=testerp roadhog server",
+    "build:t243": "cross-env API_ENV=t243 roadhog build",
+    "build:t241": "cross-env API_ENV=t241 roadhog build",
+    "build:t242": "cross-env API_ENV=t242 roadhog build",
+    "build:t240": "cross-env API_ENV=t240 roadhog build",
+    "build:test": "cross-env API_ENV=test roadhog build",
+    "build:testerp": "cross-env API_ENV=testerp roadhog build",
+    "build": "cross-env API_ENV=debug roadhog build",
+    "build:api": "roadhog-api-doc build",
+    "dev:no-proxy": "cross-env NO_PROXY=true roadhog server",
+    "site": "roadhog-api-doc static && gh-pages -d dist",
+    "analyze": "roadhog build --analyze",
+    "lint:style": "stylelint \"src/**/*.less\" --syntax less",
+    "lint": "eslint --ext .js src mock tests && npm run lint:style",
+    "lint:fix": "eslint --fix --ext .js src mock tests && npm run lint:style",
+    "lint-staged": "lint-staged",
+    "lint-staged:js": "eslint --ext .js",
+    "test": "jest",
+    "test:all": "node ./tests/run-tests.js",
+    "fix-memory-limit": "cross-env LIMIT=10096 increase-memory-limit"
+  },
+  "dependencies": {
+    "antd": "^3.0.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-runtime": "^6.26.0",
+    "braft-editor": "^2.2.7",
+    "braft-extensions": "^0.0.16",
+    "classnames": "^2.2.5",
+    "core-js": "^2.5.1",
+    "dva": "^2.1.0",
+    "dva-model-extend": "^0.1.2",
+    "g-cloud": "^1.0.2-beta",
+    "g2": "^2.3.13",
+    "g2-plugin-slider": "^1.2.1",
+    "lodash": "^4.17.5",
+    "lodash-decorators": "^4.4.1",
+    "lodash.clonedeep": "^4.5.0",
+    "moment": "^2.19.1",
+    "number-precision": "^1.2.0",
+    "numeral": "^2.0.6",
+    "prop-types": "^15.5.10",
+    "qs": "^6.5.0",
+    "react": "^16.3.1",
+    "react-beautiful-dnd": "^10.0.4",
+    "react-container-query": "^0.9.1",
+    "react-copy-to-clipboard": "^5.0.1",
+    "react-dnd": "^7.0.2",
+    "react-dnd-html5-backend": "^7.0.2",
+    "react-document-title": "^2.0.3",
+    "react-dom": "^16.3.1",
+    "react-fittext": "^1.0.0",
+    "react-lifecycle": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "babel-jest": "^21.0.0",
+    "babel-plugin-dva-hmr": "^0.3.2",
+    "babel-plugin-import": "^1.11.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.1.1",
+    "cross-port-killer": "^1.0.1",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.2",
+    "eslint": "^4.8.0",
+    "eslint-config-airbnb": "^16.0.0",
+    "eslint-plugin-babel": "^4.0.0",
+    "eslint-plugin-compat": "^2.2.0",
+    "eslint-plugin-html": "^4.0.2",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^6.0.0",
+    "eslint-plugin-markdown": "^1.0.0-beta.6",
+    "eslint-plugin-react": "^7.0.1",
+    "gh-pages": "^1.0.0",
+    "husky": "^0.14.3",
+    "jest": "^21.0.1",
+    "lint-staged": "^4.3.0",
+    "mockjs": "^1.0.1-beta3",
+    "prettier": "^1.9.0",
+    "pro-download": "^1.0.0",
+    "react-test-renderer": "^16.0.0",
+    "redbox-react": "^1.3.2",
+    "roadhog": "^1.4.6",
+    "roadhog-api-doc": "^0.3.3",
+    "rollbar": "^2.3.1",
+    "stylelint": "^8.1.0",
+    "stylelint-config-standard": "^17.0.0"
+  },
+  "optionalDependencies": {
+    "nightmare": "^2.10.0"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "react"
+    ],
+    "plugins": [
+      "transform-decorators-legacy",
+      "transform-class-properties",
+      "transform-remove-console"
+    ]
+  },
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/tests/setupTests.js"
+    ],
+    "testMatch": [
+      "**/?(*.)(spec|test|e2e).js?(x)"
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>/tests/jasmine.js",
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|less)$": "<rootDir>/tests/styleMock.js"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx}": "lint-staged:js",
+    "**/*.less": "stylelint --syntax less",
+    "*.{js,jsx,less,json}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 10"
+  ]
+}

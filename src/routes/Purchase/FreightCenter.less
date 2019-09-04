@@ -1,0 +1,70 @@
+.modalStyle{
+    :global{
+        .ant-modal-content{
+            .ant-modal-body {
+                div{
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+.topLine{
+    background:#ffffe1;
+    padding: 10px;
+    margin-bottom: 10px;
+    span{
+        display: inline-block;
+        margin-right: 30px;
+    }
+}
+.paid{
+    background: #ccc;
+}
+.line{
+    span{
+        display: inline-block;
+        span{
+            font-weight: bold;
+        }
+    }
+}
+.attachment{
+    .imgBox{
+        width:80px;
+        height: 80px;
+        padding: 6px;
+        border: 1px solid #ccc;
+        margin-right: 10px;
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .cover{
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,.5);
+            display: none;
+            position: absolute;
+            left: 0;
+            top:0;
+            text-align: center;
+            line-height: 90px;
+        }
+    }
+    span{
+        margin-right: 20px;
+    }
+}
+.imgBox:hover .cover{
+    display: block;
+}
+.select{
+    &>span{
+        display: inline-block;
+        margin: 0 20px;
+    }
+}

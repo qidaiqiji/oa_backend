@@ -1,0 +1,207 @@
+.container{
+    width:100%;
+    min-height: 240px;
+    .imgBox{
+        width:180px;
+        height: 100%;
+        float: left;
+        margin-right: 14px;
+        margin-top:16px;
+        cursor: pointer;
+        overflow-y: hidden;
+        .imgWrap{
+            width: 100%;
+            height: 170px;
+            background: #fff;
+            display: flex;
+            border: 1px solid #d8d7d7;
+            align-items: flex-start;
+            overflow-y: hidden;
+            position: relative;
+            .picture{
+                width:100%;
+                height: 130px;
+                vertical-align: middle;
+            }
+            .coverBar{
+                width:100%;
+                background: #959494;
+                height: 40px;
+                position: absolute;
+                bottom: 0;
+                line-height: 40px;
+                text-align: center;
+            }
+        }
+        
+        .ImgDesc{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+    }
+    .galleryBox{
+        background: #959494;
+        width:170px;
+        height: 200px;
+        padding: 10px 10px 0 10px;
+        margin-right: 20px;
+        margin-top: 20px;
+        position: relative;
+        float: left;
+        cursor: pointer;
+        .img{
+            width:100%; 
+            height: 150px;      
+        }
+        .title{
+            color:#fff;
+            width: 100%;
+            background: #959494;
+            height: 50px;
+            line-height: 50px;
+            font-size: 14px;
+            position: absolute;
+            padding-left: 10px;
+            box-sizing: border-box;
+            bottom: 0;
+            left: 0;
+            margin: 0;
+        }
+        .icon{
+            position: absolute;
+            right:10px;
+        }
+    }
+}
+.uploadComponent{
+    :global{
+        .ant-upload-list-item-info > span{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+.imgRow{
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    // div{
+    //     flex: 1;
+    // }
+    // div{
+    //     float: left;
+    // }
+    .icon{
+        width: 10%;
+        text-align: center;
+        margin-top:300px;
+        cursor: pointer;
+    }
+    .showImg{
+        margin: 0 30px;
+        width:70%;
+        height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        img{
+            max-width: 100%;
+            max-height: 100%;
+            vertical-align: middle;
+
+        }
+    }
+}
+.rowItems{
+    span{
+        display: inline-block;
+        margin-right: 10px;
+    }
+}
+.videoContainer{
+    width:100%;
+    min-height: 240px;
+    .videoBox{
+        width: 300px;
+        height: 100%;
+        float: left;
+        margin-right: 10px;
+        margin-top:10px;
+        .video{
+            width:300px;
+            height: 100%;
+            video{
+                width: 100%;
+                height: 170px;
+            }
+            .bar{
+                width: 100%;
+                height: 34px;
+                line-height: 34px;
+                background: #959494;
+                padding: 0 6px;
+                box-sizing: border-box;
+                margin-top:-5px;
+                span{
+                    color:#fff;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .desc{
+        p{
+            margin: 0;
+            width: 100%;
+            height: 20px;
+        }
+    }
+}
+.uploadBtn{
+    margin-top:40px;
+    margin-left: 180px;
+}
+.uploadList{
+    :global{
+        .ant-upload-list-item{
+            display: none;
+        }
+        .ant-upload-list-item-done{
+            display: none;
+        }
+    }
+}
+.coverContainer{
+    div{
+        width:100px;
+        height: 100px;
+        float: left;
+        margin-right: 10px;
+        padding: 4px;
+        // margin-top:10px;
+        cursor: pointer;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    .isSelected{
+        border: 1px dashed blue;
+        border-radius: 2px;
+    }
+}
+.imgTitle{
+    display:inline-block;
+    width:150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 32px;
+    line-height: 32px;
+    color: #2e2d2d;
+    margin-left: 4px;
+}

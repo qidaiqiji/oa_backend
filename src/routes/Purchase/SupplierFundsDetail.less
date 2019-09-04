@@ -1,0 +1,63 @@
+.fixed {
+  height: 80px;
+  background-color: hsla(0, 0%, 100%, .9);
+  padding-top: 17px;
+}
+.fixed::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 10px;
+}
+.addPayBtn {
+  height: 40px;
+  margin-top: 5px;
+  width: 140px;
+  text-align: center;
+  line-height: 40px;
+  display: inline-block;
+  background-color: #fff;
+  color: #f00;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid #f00;
+  border-radius: 5px;
+}
+
+.addPayBtn:hover {
+  box-shadow: 0px 0px 1px #6b0101;
+}
+
+.addReceivedBtn {
+  height: 40px;
+  margin-top: 5px;
+  width: 140px;
+  text-align: center;
+  line-height: 40px;
+  display: inline-block;
+  background-color: #339966;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.addReceivedBtn:hover {
+  box-shadow: 0px 0px 1px #1b5036;
+}
+
+.addPageHeader {
+  :global {
+    .ant-breadcrumb > span:nth-child(5) {
+      display: none;
+    }
+    .ant-breadcrumb > span:nth-child(4) > span:last-child {
+      display: none;
+    }
+  }
+}

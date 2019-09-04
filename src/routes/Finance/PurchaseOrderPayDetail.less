@@ -1,0 +1,45 @@
+.fixed {
+  height: 80px;
+  background-color: hsla(0, 0%, 100%, 0.9);
+  padding-top: 17px;
+}
+.fixed::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 10px;
+}
+
+.addPageHeader {
+  :global {
+    .ant-breadcrumb > span:nth-child(5) {
+      display: none;
+    }
+    .ant-breadcrumb > span:nth-child(4) > span:last-child {
+      display: none;
+    }
+  }
+}
+
+.importBtn {
+  height: 38px;
+  margin-top: 5px;
+  width: 100px;
+  text-align: center;
+  line-height: 38px;
+  display: inline-block;
+  background-color: rgb(255, 255, 255);
+  color: #000;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 5px;
+  float: right;
+}
+
+.goodsImg {
+  width: 50px;
+  height: 50px;
+}

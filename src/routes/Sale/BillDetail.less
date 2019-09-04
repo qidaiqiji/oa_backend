@@ -1,0 +1,78 @@
+.extraButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.awaitAmount {
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+  vertical-align: -8%;
+  margin-left: 10px;
+}
+.customerInfo {
+  font-weight: bold;
+  font-size: 15px;
+  margin-left: 10px;
+}
+.selectAmount {
+  .awaitAmount
+}
+.selectAmount::before {
+  content: '¥';
+  display: inline-block;
+}
+.countedAmount {
+  .customerInfo;
+}
+.countedAmount::before {
+  content: '¥';
+  display: inline-block;
+}
+.imgNum {
+  position: absolute;
+  top: -12px;
+  right: 0;
+  background: #808080;
+  padding: 0 10px;
+}
+.receiveRecord {
+  font-weight: bold;
+  font-size: 21px;
+  margin-left: 10px;
+}
+.receivedAmount {
+  color: red;
+  font-size: 21px;
+  font-weight: bold;
+}
+.require::before {
+  display: inline-block;
+  content: '*';
+  color: red;
+}
+.require {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+}
+// .carousel {
+//   :global {
+//     .ant-carousel .slick-dots li {
+//       background: red;
+//     }
+//   }
+// }
+:global {
+  .ant-carousel .slick-dots li {
+    background: #ccc;
+  }
+  .ant-carousel .slick-dots li.slick-active button {
+    background: #595959;
+  }
+}
+.imgDetail {
+  width: '472px';
+  height: '260px';
+  background: '#ccc';
+}

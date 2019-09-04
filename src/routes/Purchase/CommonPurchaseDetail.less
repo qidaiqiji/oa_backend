@@ -1,0 +1,116 @@
+.fixed {
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  right: 24px;
+  left: 224px;
+  background-color: hsla(0, 0%, 100%, .9);
+  padding: 8px 20px;
+}
+.fixed::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background-position: 0 0;
+  background-repeat: repeat-x;
+  background-size: 1px auto;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAKCAYAAAB10jRKAAAAGXRFW…RBVHjaYvj//z8D87Vr1xiZGBgYwAQTnGCGE0xwWUaAAAMA/rIFo+cUt4gAAAAASUVORK5CYII=);
+}
+.saveBtn {
+  height: 30px;
+  margin-top: 5px;
+  width: 80px;
+  text-align: center;
+  line-height: 30px;
+  display: inline-block;
+  background-color: #26C09F;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid #26C09F;
+}
+
+.cancelBtn {
+  border: 1px solid #D9D9D9;
+  height: 30px;
+  margin-top: 5px;
+  margin-left: 20px;
+  width: 80px;
+  text-align: center;
+  line-height: 30px;
+  display: inline-block;
+  background-color: #fff;
+  color: #000;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+// .detailPageHeader {
+//   :global {
+//     .ant-breadcrumb > span:last-child {
+//       display: none;
+//     }
+//     .ant-breadcrumb > span:nth-last-child(2) > span:last-child {
+//       display: none;
+//     }
+//   }
+// }
+:global {
+  .ant-table-thead > tr > th {
+    color: #576B7D;
+    text-align: center;
+    background-color: #EEF1F9;
+  }
+}
+.textAlign {
+  text-align: center;
+}
+.detail {
+  font-size: 16px;
+  font-weight: bold;
+}
+.warning{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.bankInfo{
+  span{
+    display:inline-block;
+    margin-right:10px;
+    
+  }
+}
+.logo{
+  width:40px;
+  height: 40px;
+}
+.line {
+  margin: 20px 0;
+  div{
+      display: inline-block;
+      margin-right: 30px;
+      &>span{
+          font-weight: bold;
+          margin-left: 10px;
+          display: inline-block
+      }
+  }
+}
+.marginBottom{
+  margin-bottom: 20px;
+}
+.imgBox{
+  width:100px;
+  height: 100px;
+  padding: 10px;
+  display: inline-block;
+  img{
+      width: 100%;
+      height: 100%;
+  }
+}
